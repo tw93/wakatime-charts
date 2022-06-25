@@ -30,9 +30,9 @@ const makeVirtualDom = () => {
 const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const {
     svgWidth = 540,
-    svgHeight = 200,
+    svgHeight = 174,
     margin = 6,
-    padding = 4,
+    padding = 2,
     namesWidth = 100,
     durationsWidth = 110,
   } = measurements;
@@ -40,17 +40,15 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   // Measurements
 
   const contentWidth = svgWidth - 2 * margin;
-  const contentHeight = svgHeight - 2 * margin;
+  const contentHeight = svgHeight;
 
   const namesX = margin;
   const durationsX = namesX + padding + namesWidth;
   const chartX = durationsX + padding + durationsWidth;
   const chartWidth = contentWidth - chartX + margin;
 
-  const headerY = margin;
-  const headerHeight = 0 + padding;
-  const statsY = headerY + headerHeight;
-  const statsHeight = contentHeight - headerHeight;
+  const statsY = 0;
+  const statsHeight = contentHeight;
 
   // SVG
 
@@ -77,15 +75,6 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
     .attr("stroke", "rgb(255,255,255)")
     .attr("fill", "rgb(255,255,255)")
     .attr("stroke-opacity", 1);
-
-  // Header
-
-  // svg
-  //   .append("text")
-  //   .attr("transform", `translate(${margin} ${headerY})`)
-  //   .attr("class", "titleText")
-  //   .attr("dominant-baseline", "hanging")
-  //   .html(title);
 
   // Y axis scaling
 
