@@ -31,8 +31,8 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const {
     svgWidth = 540,
     svgHeight = 200,
-    margin = 10,
-    padding = 6,
+    margin = 6,
+    padding = 4,
     namesWidth = 100,
     durationsWidth = 110,
   } = measurements;
