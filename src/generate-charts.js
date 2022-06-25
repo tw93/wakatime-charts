@@ -47,7 +47,7 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const chartX = durationsX + padding + durationsWidth;
   const chartWidth = contentWidth - chartX + margin;
 
-  const statsY = 0;
+  const statsY = 2;
   const statsHeight = contentHeight;
 
   // SVG
