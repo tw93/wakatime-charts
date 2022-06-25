@@ -30,7 +30,7 @@ const makeVirtualDom = () => {
 const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const {
     svgWidth = 540,
-    svgHeight = 174,
+    svgHeight = 160,
     margin = 6,
     padding = 2,
     namesWidth = 100,
