@@ -48,7 +48,7 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const chartWidth = contentWidth - chartX + margin;
 
   const headerY = margin;
-  const headerHeight = 18 + padding;
+  const headerHeight = 0 + padding;
   const statsY = headerY + headerHeight;
   const statsHeight = contentHeight - headerHeight;
 
@@ -232,7 +232,7 @@ const generateLanguageStatsChart = (data) => {
   const { body } = makeVirtualDom();
 
   drawStatsChart(body, {
-    data: data.languages.slice(0, 5),
+    data: data.languages.slice(0, 6),
     fill: (datum) =>
       languageColors[datum.name] ? languageColors[datum.name].color : "#333333",
   });
