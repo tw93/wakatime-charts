@@ -232,7 +232,7 @@ const generateLanguageStatsChart = (data) => {
   const { body } = makeVirtualDom();
 
   drawStatsChart(body, {
-    data: data.languages.slice(0, 6),
+    data: data.languages.slice(0, 5),
     fill: (datum) =>
       languageColors[datum.name] ? languageColors[datum.name].color : "#333333",
   });
