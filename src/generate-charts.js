@@ -80,12 +80,12 @@ const drawStatsChart = (body, { title, data, fill, measurements = {} }) => {
 
   // Header
 
-  svg
-    .append("text")
-    .attr("transform", `translate(${margin} ${headerY})`)
-    .attr("class", "titleText")
-    .attr("dominant-baseline", "hanging")
-    .html(title);
+  // svg
+  //   .append("text")
+  //   .attr("transform", `translate(${margin} ${headerY})`)
+  //   .attr("class", "titleText")
+  //   .attr("dominant-baseline", "hanging")
+  //   .html(title);
 
   // Y axis scaling
 
