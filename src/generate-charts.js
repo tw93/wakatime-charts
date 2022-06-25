@@ -242,24 +242,8 @@ const generateLanguageStatsChart = (data) => {
   saveChart(body, "generated/wakatime_weekly_language_stats.svg");
 };
 
-const generateProjectStatsChart = (data) => {
-  const { body } = makeVirtualDom();
-
-  drawStatsChart(body, {
-    title: "Weekly Project Stats",
-    data: data.projects.slice(0, 5),
-    fill: "#438cee",
-    measurements: {
-      namesWidth: 150,
-    },
-  });
-
-  saveChart(body, "generated/wakatime_weekly_project_stats.svg");
-};
-
 (async () => {
   createGeneratedDirectory();
   const data = await getStatsData();
   generateLanguageStatsChart(data);
-  generateProjectStatsChart(data);
 })();
