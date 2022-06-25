@@ -27,7 +27,7 @@ const makeVirtualDom = () => {
   return { document, body };
 };
 
-const drawStatsChart = (body, { title, data, fill, measurements = {} }) => {
+const drawStatsChart = (body, {data, fill, measurements = {} }) => {
   const {
     svgWidth = 540,
     svgHeight = 175,
@@ -212,7 +212,6 @@ const drawStatsChart = (body, { title, data, fill, measurements = {} }) => {
     text { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #333333 }
     .nameText, .durationText { opacity: 0; animation: fadeInAnimation 0.5s ease-in-out forwards; }
     .durationBar { transform: scaleX(0); animation: scaleXInAnimation 0.5s ease-in-out forwards; }
-    .titleText { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #2f80ed; animation: fadeInAnimation 0.8s ease-in-out forwards; }
     @keyframes fadeInAnimation {
       0%   { opacity: 0; }
       100% { opacity: 1; }
@@ -233,7 +232,6 @@ const generateLanguageStatsChart = (data) => {
   const { body } = makeVirtualDom();
 
   drawStatsChart(body, {
-    title: "Weekly Language Stats",
     data: data.languages.slice(0, 5),
     fill: (datum) =>
       languageColors[datum.name] ? languageColors[datum.name].color : "#333333",
