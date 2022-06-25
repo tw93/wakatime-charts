@@ -74,8 +74,8 @@ const drawStatsChart = (body, { title, data, fill, measurements = {} }) => {
     .attr("x", 1)
     .attr("y", 1)
     .attr("rx", 4.5)
-    .attr("stroke", "rgb(228,226,226)")
-    .attr("fill", "rgb(255,254,254)")
+    .attr("stroke", "rgb(255,255,255)")
+    .attr("fill", "rgb(255,255,255)")
     .attr("stroke-opacity", 1);
 
   // Header
