@@ -72,8 +72,8 @@ const drawStatsChart = (body, {data, fill, measurements = {} }) => {
     .attr("x", 1)
     .attr("y", 1)
     .attr("rx", 4.5)
-    .attr("stroke", "rgb(255,255,255)")
-    .attr("fill", "rgb(255,255,255)")
+    .attr("stroke", "transparent")
+    .attr("fill", "transparent")
     .attr("stroke-opacity", 1);
 
   // Y axis scaling
@@ -223,11 +223,12 @@ const generateLanguageStatsChart = (data) => {
   drawStatsChart(body, {
     data: data.languages.slice(0, 5),
     fill: (datum) =>
-      languageColors[datum.name] ? languageColors[datum.name].color : "#333333",
+      languageColors[datum.name] ? languageColors[datum.name].color : "#58a6ff",
   });
 
   saveChart(body, "generated/wakatime_weekly_language_stats.svg");
 };
+
 
 (async () => {
   createGeneratedDirectory();
