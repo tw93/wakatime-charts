@@ -252,7 +252,7 @@ const generateLanguageBlackStatsChart = (data) => {
       languageColors[datum.name] ? languageColors[datum.name].color : '#58a6ff',
   });
 
-  saveChart(body, 'generated/wakatime_weekly_language_stats.svg');
+  saveChart(body, 'generated/wakatime_weekly_language_stats_black.svg');
 };
 
 (async () => {
