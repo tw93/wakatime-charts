@@ -94,11 +94,17 @@ const drawStatsChart = (
     .attr('id', 'overflowGradient');
   overflowGradient
     .append('stop')
-    .attr('stop-color', 'rgba(254, 254, 254, 0)')
+    .attr(
+      'stop-color',
+      isBlack ? 'rgba(13, 17, 23, 0)' : 'rgba(254, 254, 254, 0)',
+    )
     .attr('offset', '0');
   overflowGradient
     .append('stop')
-    .attr('stop-color', 'rgba(255, 254, 254, 1)')
+    .attr(
+      'stop-color',
+      isBlack ? 'rgba(13, 17, 23, 0)' : 'rgba(254, 254, 254, 0)',
+    )
     .attr('offset', '1');
 
   // Names
