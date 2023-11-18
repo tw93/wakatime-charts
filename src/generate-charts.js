@@ -17,6 +17,7 @@ const getStatsData = async () => {
     `https://wakatime.com/api/v1/users/current/stats/last_30_days?api_key=${WAKATIME_API_KEY}`,
   );
   const response = await raw_response.json();
+  console.log("response>>>>>>>>", response);
   return response.data;
 };
 
